@@ -1,6 +1,7 @@
 package com.example.todolistui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,6 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -54,6 +56,10 @@ fun TabPanelControl(
                             corner = CornerSize(15.dp)
                         )
                     )
+                    .clip(RoundedCornerShape(CornerSize(15.dp)))
+                    .clickable {
+                        selectedInd = index
+                    }
                     .padding(horizontal = 15.dp)
 
             ){
