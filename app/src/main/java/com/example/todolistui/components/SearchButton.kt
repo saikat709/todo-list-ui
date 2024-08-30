@@ -40,7 +40,7 @@ fun SearchButton(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showSystemUi = true)
+@Preview(showBackground = true)
 @Composable
 fun SearchBarPrev(modifier: Modifier = Modifier) {
     SearchButton()
